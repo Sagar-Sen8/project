@@ -1,33 +1,62 @@
-.app-container{
+/* Default styles */
+.app-container {
   display: flex;
 }
 
-.content{
-  width:100%;
+.content {
+  width: 100%;
 }
 
-.sidebar{
+.sidebar {
   min-height: 800px;
- 
 }
 
 .post-card {
- margin: 20px 50px; 
- 
+  margin: 20px 50px;
 }
 
-.hastag{
+.hashtag {
   margin: 0px 3px;
 }
 
-.reactions{
+.reactions {
   width: 100%;
   margin: 15px 0 0 0;
 }
 
-.create-post{
+.create-post {
   width: 80%;
-  margin-top:50px ;
+  margin-top: 50px;
   margin-left: 10%;
-  
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+  .app-container {
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  .create-post {
+    width: 90%; /* Adjust width for smaller screens */
+    margin-left: 5%; /* Adjust margin for smaller screens */
+  }
+
+  .post-card {
+    margin: 20px 20px; /* Adjust margin for smaller screens */
+  }
+
+  .sidebar {
+    min-height: auto; /* Allow sidebar height to adjust */
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .create-post {
+    width: 95%; /* Further adjust width for smallest screens */
+    margin-left: 2.5%; /* Further adjust margin for smallest screens */
+  }
+
+  .post-card {
+    margin: 20px 10px; /* Further adjust margin for smallest screens */
+  }
 }
